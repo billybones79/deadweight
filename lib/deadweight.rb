@@ -37,9 +37,13 @@ class Deadweight
 
       next if stripped_selector.empty?
 
+      begin
       if doc.search(stripped_selector).any?
         log.puts("  #{selector.green}")
         selector
+      end
+      rescue Nokogiri::CSS::SyntaxError
+        log.puts( "crashed on #{selector.green}")
       end
     end
   end

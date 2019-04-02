@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.license  = 'MIT'
 
   s.add_dependency 'nokogiri'
-  s.add_dependency 'css_parser', '~> 1.3.5'
+  #s.add_dependency 'css_parser', '~> 1.3.5'
 
   s.add_development_dependency "shoulda"
   s.add_development_dependency "mechanize", "~> 2.5.1"
@@ -20,4 +20,3 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.executables  = Dir.glob("bin/*").map(&File.method(:basename))
 end
-
